@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Get, Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Student, StudentDocument } from './student.schema';
 import { Model } from 'mongoose';
@@ -14,5 +14,10 @@ export class StudentService {
      Promise<Student> {
         const newStudent = new this.studentModel(data);
         return newStudent.save();
+     }
+
+     async getAllStudents(): Promise<Student[]>{
+        return this.studentModel.find().exec();
+     
      }
 }

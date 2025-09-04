@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post,Get } from '@nestjs/common';
 import { StudentService } from './student.service';
 import { Student } from './student.schema';
 
@@ -11,4 +11,10 @@ export class StudentController {
         return this.studentService.createStudent(data);
     }
     
+    
+    @Get()
+        async getStudents(){
+        return this.studentService.getAllStudents();
+    }
+
 }
