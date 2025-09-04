@@ -20,4 +20,8 @@ export class StudentService {
         return this.studentModel.find().exec();
      
      }
+
+     async getStudentByID (id: string): Promise<Student | null> {
+        return this.studentModel.findById(id).exec();
+     }
 }
