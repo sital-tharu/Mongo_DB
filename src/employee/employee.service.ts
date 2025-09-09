@@ -21,7 +21,13 @@ export class EmployeeService {
             name : 'anu',
             profile : profile._id
     });
+
+    
     return employee.save();
 
 }
+
+async findAll() : Promise <Employee[]>{
+        return this.employeeModel.find().populate('profile').exec();
+    }
 }
