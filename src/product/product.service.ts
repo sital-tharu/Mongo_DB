@@ -22,4 +22,9 @@ export class ProductService {
         })
         return product.save();
     }
+
+
+    async getAllProducts() : Promise<Product[]>{
+        return this.productModel.find().exec();
+    }
 }
