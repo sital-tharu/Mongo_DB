@@ -9,6 +9,7 @@ import { StudentModule } from './student/student.module';
 import { UserModule } from './user/user.module';
 import { EmployeeModule } from './employee/employee.module';
 import { ProductModule } from './product/product.module';
+import { LibraryModule } from './library/library.module';
 
 
 @Module({
@@ -18,7 +19,8 @@ import { ProductModule } from './product/product.module';
     StudentModule,
     UserModule,
     EmployeeModule,
-    ProductModule
+    ProductModule,
+    LibraryModule
 
 ],
   controllers: [AppController, EnvController],
