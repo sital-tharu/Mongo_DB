@@ -10,3 +10,4 @@ export class libary extends Document{
     @Prop({type:[{type: Types.ObjectId, ref:'Book'}]})
     books : Types.ObjectId[];
 }
+export const libarySchema = SchemaFactory.createForClass(libary);
