@@ -3,7 +3,7 @@ import { Prop , Schema , SchemaFactory } from "@nestjs/mongoose";
 import { Document } from "mongoose";
 
 @Schema()
-export class PropSchema extends Document{
+export class Book extends Document{
     @Prop()
     title: string;
 
@@ -11,3 +11,6 @@ export class PropSchema extends Document{
     author : string;
 }
 
+
+
+export const schemaFactory = SchemaFactory.createForClass(Book);
