@@ -4,16 +4,16 @@ import { LibraryService } from './library.service';
 @Controller('library')
 export class LibraryController {
     constructor(
-        private readonly libaryService : LibraryService
+        private readonly libraryService : LibraryService
     ){}
 
     @Post()
     createLibrary(){
-        return this.libaryService.createLibrary();
+        return this.libraryService.createLibrary();
     }
 
     @Get()
     getLibaries(){
-        return this.libaryService.getLibraries();
+        return this.libraryService.getLibraries();
     }
 }
