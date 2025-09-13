@@ -10,4 +10,4 @@ export class Project extends Document{
     developers : Types.ObjectId
 
 }
-export const DeveloperSchema = SchemaFactory.createForClass(Project);
+export const ProjectSchema = SchemaFactory.createForClass(Project);
